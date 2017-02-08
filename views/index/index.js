@@ -1,4 +1,4 @@
-require('normalize.css');
+require('spectre.css');
 require('./index.scss');
 
 $(document).ready(function() {

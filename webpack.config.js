@@ -15,7 +15,7 @@ var getEntry = function(globPath, pathDir) {
   });
   return entries;
 };
-var entries = getEntry('./views/**/**/*.js', './views/');
+var entries = getEntry('./views/**/**/index.js', './views/');
 var chunks = Object.keys(entries);
 
 module.exports = {

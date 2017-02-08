@@ -27,9 +27,11 @@
     "mongoose": "*",
     "morgan": "^1.8.0",
     "normalize.css": "^5.0.0",
+    "notyf": "^2.0.0",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "spectre.css": "^0.1.32"
   },
   "devDependencies": {
     "babel-core": "^6.7.7",
