@@ -93,7 +93,6 @@ app.use(flash());
 
 // 全局变量
 app.use(function(req, res, next) {
-
   // 获取webpack的hash值
   var hash = util.getHash('./public/js/*.js');
 

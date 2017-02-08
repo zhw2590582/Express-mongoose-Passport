@@ -4,6 +4,7 @@ var router = express.Router();
 // 首页
 router.get('/', ensureAuthenticated, function(req, res){
 	res.render('index/index',{
+		dir:'index',
 		subTitle: false
 	});
 });

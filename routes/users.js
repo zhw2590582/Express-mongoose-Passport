@@ -7,7 +7,8 @@ var User = require('../models/user');
 
 // 注册页面
 router.get('/register', function(req, res) {
-  res.render('accounts/register', {
+  res.render('register/index', {
+    dir: 'register',
     layout: 'login',
     subTitle: '注册'
   });
@@ -15,7 +16,8 @@ router.get('/register', function(req, res) {
 
 // 登录页面
 router.get('/login', function(req, res) {
-  res.render('accounts/login', {
+  res.render('login/index', {
+    dir: 'login',
     layout: 'login',
     subTitle: '登录'
   });
@@ -40,7 +42,8 @@ router.post('/register', function(req, res) {
   var errors = req.validationErrors();
 
   if (errors) {
-    res.render('accounts/register', {
+    res.render('register/index', {
+      dir: 'register',
       layout: 'login',
       errors: errors
     });
