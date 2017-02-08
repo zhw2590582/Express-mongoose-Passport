@@ -1,0 +1,2 @@
+webpackJsonp([0],[function(n,o,c){(function(n){"use strict";c(2),c(6),n(document).ready(function(){var n="login";console.log(n)})}).call(o,c(1))},,function(n,o){},,,,function(n,o){}]);
+//# sourceMappingURL=index.js.map

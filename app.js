@@ -14,6 +14,9 @@ var compression = require('compression');
 var helmet = require('helmet');
 var base = require('./config/base');
 
+//函数工具
+var util = require('./config/util');
+
 // 路由页面
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -88,12 +91,12 @@ app.use(expressValidator({
 // 提示信息
 app.use(flash());
 
-// 获取webpack的hash值
-var util = require('./config/util');
-var hash = util.getHash('./public/js/*.js')
-
 // 全局变量
 app.use(function(req, res, next) {
+
+  // 获取webpack的hash值
+  var hash = util.getHash('./public/js/*.js');
+
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
