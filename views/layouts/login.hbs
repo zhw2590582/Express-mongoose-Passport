@@ -12,25 +12,24 @@
 	<link rel="stylesheet" href="/css/{{dir}}/index{{hash}}.css">
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
+	<section>
+		<section class="container warning-info">
+			<div class="columns">
 				{{#if success_msg}}
-					<div class="alert alert-success">{{success_msg}}</div>
+					<div class="column col-12 text-center">{{success_msg}}</div>
 				{{/if}}
 				{{#if error_msg}}
-					<div class="alert alert-danger">{{error_msg}}</div>
+					<div class="column col-12 text-center">{{error_msg}}</div>
 				{{/if}}
 				{{#if error}}
-					<div class="alert alert-danger">{{error}}</div>
+					<div class="column col-12 text-center">{{error}}</div>
 				{{/if}}
-				{{{body}}}
-			</div>
-		</div>
-		<footer class="footer">
-			<p>&copy; 2015 LoginApp, Inc.</p>
-		</footer>
-	</div>
+      </div>
+		</section>
+		<section class="container">
+			{{{body}}}
+		</section>
+	</section>
 	<script src="/js/vendor{{hash}}.js"></script>
 	<script src="/js/{{dir}}/index{{hash}}.js"></script>
 </body>
