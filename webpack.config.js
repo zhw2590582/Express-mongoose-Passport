@@ -80,5 +80,5 @@ module.exports = {
       }
     }),
   ],
-  devtool: 'source-map'
+  devtool: isProduction ? null : 'source-map'
 };

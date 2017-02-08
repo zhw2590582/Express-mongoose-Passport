@@ -6,10 +6,24 @@
 
 需要运行于 Node.js v4+ 和 mongodb
 
+安装依赖
 ```sh
 $ npm install
 ```
 
+运行Express服务器
 ```sh
 $ npm start
+```
+
+新建命令行窗口
+
+监听
+```sh
+$ npm run watch
+```
+
+打包
+```sh
+$ npm run build
 ```
