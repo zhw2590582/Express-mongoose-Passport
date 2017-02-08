@@ -27,7 +27,6 @@
     "mongoose": "*",
     "morgan": "^1.8.0",
     "normalize.css": "^5.0.0",
-    "notyf": "^2.0.0",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*",

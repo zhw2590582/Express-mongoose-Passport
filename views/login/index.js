@@ -1,8 +1,4 @@
-var dialog = require('../common/js/dialog');
-
-var Notyf = require('notyf/dist/notyf.min');
-require('notyf/dist/notyf.min.css');
-var notyf = new Notyf();
+var dialog = require('../common/dialog');
 
 require('spectre.css');
 require('./index.scss');

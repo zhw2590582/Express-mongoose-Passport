@@ -1,5 +1,6 @@
-var glob = require('glob');
 
+//获取webpack的hash值
+var glob = require('glob');
 var getHash = function(globPath) {
   var name = glob.sync(globPath)[0];
   if (name.indexOf('-') > 0 ) {
