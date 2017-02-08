@@ -1,16 +1,10 @@
-# Node.js Loginapp
+# Express-mongoose-Passport
 
-This is a user login and registration app using Node.js, Express, Passport and Mongoose. It is part of the YouTube series [here](https://www.youtube.com/watch?v=Z1ktxiqyiLA)
+使用Express搭建一个简易的全栈管理系统，为后面的React Native App创建restful api支持
 
-### Version
-1.1.0
+### 安装
 
-### Usage
-
-
-### Installation
-
-Loginapp requires [Node.js](https://nodejs.org/) v4+ to run.
+需要运行于 Node.js v4+ 和 mongodb
 
 ```sh
 $ npm install
