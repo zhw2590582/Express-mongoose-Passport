@@ -88,6 +88,10 @@ app.use(expressValidator({
 // 提示信息
 app.use(flash());
 
+// 获取webpack的hash值
+var util = require('./config/util');
+var hash = util.getHash('./public/js/*.js')
+
 // 全局变量
 app.use(function(req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
@@ -95,6 +99,7 @@ app.use(function(req, res, next) {
   res.locals.error = req.flash('error');
   res.locals.user = req.user || null;
   res.locals.base = base;
+  res.locals.hash = hash || '';
   next();
 });
 
