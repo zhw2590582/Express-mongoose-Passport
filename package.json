@@ -1,13 +1,13 @@
 {
-  "name": "loginapp",
+  "name": "Express-mongoose-Passport",
   "version": "1.0.0",
-  "description": "Simple authentication system",
+  "description": "使用Express搭建一个简易的全栈管理系统",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brad Traversy",
+  "author": "Harvey Zack",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "*",
@@ -28,5 +28,24 @@
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "chokidar": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.14",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.10.0",
+    "node-sass": "^4.5.0",
+    "npm-install-webpack-plugin": "^4.0.4",
+    "reload": "^1.1.1",
+    "resolve-url-loader": "^1.6.1",
+    "sass-loader": "^5.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
   }
 }

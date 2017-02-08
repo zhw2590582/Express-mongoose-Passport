@@ -7,14 +7,14 @@ var User = require('../models/user');
 
 // 注册页面
 router.get('/register', function(req, res) {
-  res.render('register', {
+  res.render('accounts/register', {
     subTitle: '注册'
   });
 });
 
 // 登录页面
 router.get('/login', function(req, res) {
-  res.render('login', {
+  res.render('accounts/login', {
     subTitle: '登录'
   });
 });
