@@ -1,5 +1,32 @@
 {{>header}}
-		<section class="container">
-			{{{body}}}
-		</section>
+<header class="header clearfix">
+	<div class="header-left float-left clearfix">
+		<div class="logo float-left">
+			Teahouse
+		</div>
+		<div class="setup float-right cursor">
+			<i class="fa fa-cog" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div class="header-right clearfix">
+		<div class="search float-left">
+			<input class="form-input input-sm" type="text" placeholder="搜索关键词">
+		</div>
+		<div class="account float-right clearfix">
+			<div class="bell float-left cursor">
+				<i class="fa fa-bell-o" aria-hidden="true"></i>
+				<span class="redDot"></span>
+			</div>
+			<div class="avatarBox float-left cursor">
+				<figure class="avatar avatar-sm">
+				  <img src="/img/avatar.png" />
+				</figure>
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="container">
+	{{{body}}}
+</section>
 {{>footer}}
