@@ -13,5 +13,14 @@ module.exports = {
       password: 'guest',
       role: 'guest'
     }
-  ]
+  ],
+  mailStmp: {
+    service: 'qq',
+    prot: 25,
+    auth: {
+      user: '717995589@qq.com',
+      pass: 'Qq@717995589'
+    },
+    to:'laozhaochaguan@sina.cn'
+  }
 }

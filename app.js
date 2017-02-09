@@ -17,7 +17,7 @@ var helmet = require('helmet');
 var base = require('./config/base');
 
 //函数工具
-var util = require('./config/util');
+var util = require('./util/base');
 
 // 路由页面
 var routes = require('./routes/index');

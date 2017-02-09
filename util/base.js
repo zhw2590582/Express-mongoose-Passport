@@ -1,5 +1,5 @@
 var glob = require('glob');
-var base = require('./base');
+var base = require('../config/base');
 
 //获取webpack的hash值
 var getHash = function(globPath) {
