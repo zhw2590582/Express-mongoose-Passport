@@ -38,6 +38,7 @@ app.use(helmet());
 // 视图引擎
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', exphbs({
+  partialsDir: 'views/common/partials',
   layoutsDir: 'views/layouts',
   defaultLayout: 'main',
   extname: '.hbs'

@@ -1,7 +1,5 @@
-require('spectre.css');
-require('./index.scss');
+var base = require('../common/js/base');
 
-$(document).ready(function() {
-  let str = 'error'
-  console.log(str);
-});
+require('spectre.css');
+require('../common/style/base.scss');
+require('./index.scss');

@@ -43,8 +43,28 @@ var registerAble = function (req, res, next) {
   }
 }
 
+// 主页验证是否登陆
+var indexAuthenticated = function (req, res, next){
+	if(req.isAuthenticated() || req.session.admin){
+		return next();
+	} else {
+		res.redirect('/users/login');
+	}
+}
+
+// 内页验证是否登陆
+var pageAuthenticated = function (req, res, next){
+  if(req.isAuthenticated() || req.session.admin){
+    res.redirect('/');
+	} else {
+		return next();
+	}
+}
+
 module.exports = {
   getHash,
   adminAccount,
-  registerAble
+  registerAble,
+  indexAuthenticated,
+  pageAuthenticated
 }

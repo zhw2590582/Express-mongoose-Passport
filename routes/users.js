@@ -7,7 +7,7 @@ var util = require('../util/base');
 var User = require('../models/user');
 
 // 注册页面
-router.get('/register', util.registerAble, function(req, res) {
+router.get('/register', util.registerAble, util.pageAuthenticated, function(req, res) {
   res.render('register/index', {
     dir: 'register',
     layout: 'login',
@@ -16,7 +16,7 @@ router.get('/register', util.registerAble, function(req, res) {
 });
 
 // 登录页面
-router.get('/login', function(req, res) {
+router.get('/login', util.pageAuthenticated, function(req, res) {
   res.render('login/index', {
     dir: 'login',
     layout: 'login',
