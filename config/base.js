@@ -14,7 +14,7 @@ module.exports = {
       role: 'guest'
     }
   ],
-  mailStmp: {
+  mailStmp: { //邮箱配置
     service: 'qq',
     prot: 25,
     auth: {
