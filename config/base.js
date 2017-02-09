@@ -21,6 +21,46 @@ module.exports = {
       user: '717995589@qq.com',
       pass: 'password'
     },
-    to:'717995589@qq.com'
-  }
+    to: '717995589@qq.com'
+  },
+  menu: [{ //菜单配置
+    title: '模块1',
+    icon: 'fa fa-bell-o',
+    subMunu: [{
+      title: '子菜单1',
+      to: '/1'
+    }, {
+      title: '子菜单2',
+      to: '/2'
+    }, {
+      title: '子菜单3',
+      to: '/3'
+    }]
+  }, {
+    title: '模块2',
+    icon: 'fa fa-bell-o',
+    subMunu: [{
+      title: '子菜单4',
+      to: '/1'
+    }, {
+      title: '子菜单5',
+      to: '/2'
+    }, {
+      title: '子菜单6',
+      to: '/3'
+    }]
+  }, {
+    title: '模块3',
+    icon: 'fa fa-bell-o',
+    subMunu: [{
+      title: '子菜单7',
+      to: '/1'
+    }, {
+      title: '子菜单8',
+      to: '/2'
+    }, {
+      title: '子菜单9',
+      to: '/3'
+    }]
+  }]
 }

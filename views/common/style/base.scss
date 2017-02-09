@@ -1,11 +1,19 @@
+ul{
+  margin: 0;
+  padding: 0;
+  li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
 .warning-info{
   position: absolute;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #5764c6;
-  color: #fff
+  z-index: 99;
+  max-width: 400px;
+  top: 20px;
+  right: 20px;
 }
 
 .parsley-errors-list{

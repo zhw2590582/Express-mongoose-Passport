@@ -4,7 +4,7 @@
 		<div class="logo float-left">
 			Teahouse
 		</div>
-		<div class="setup float-right cursor">
+		<div id="setup" class="setup float-right cursor with-tooltip" data-tooltip="快速设置">
 			<i class="fa fa-cog" aria-hidden="true"></i>
 		</div>
 	</div>
@@ -13,20 +13,80 @@
 			<input class="form-input input-sm" type="text" placeholder="搜索关键词">
 		</div>
 		<div class="account float-right clearfix">
-			<div class="bell float-left cursor">
+			<div id="bell" class="bell float-left cursor with-tooltip" data-tooltip="消息提醒">
 				<i class="fa fa-bell-o" aria-hidden="true"></i>
 				<span class="redDot"></span>
 			</div>
-			<div class="avatarBox float-left cursor">
-				<figure class="avatar avatar-sm">
-				  <img src="/img/avatar.png" />
-				</figure>
-				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			<div id="avatarBox" class="avatarBox float-left cursor">
+				<div class="avatarBtn">
+					<figure class="avatar avatar-sm">
+						<img src="/img/avatar.png" />
+					</figure>
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+				</div>
+				<ul class="avatarMenu menu">
+					<li class="menu-item">
+						<a href="#dropdowns"><i class="fa fa-cogs" aria-hidden="true"></i> 设置中心</a>
+					</li>
+					<li class="menu-item">
+						<a href="/users/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 </header>
-<section class="container">
+
+<aside class="aside clearfix">
+	<div class="main-menu float-left">
+		<ul class="main-menu-list">
+			{{#each base.menu}}
+				<li>
+					<div class="main-menu-icon">
+						<i class="{{icon}}" aria-hidden="true"></i>
+					</div>
+					<div class="main-menu-text">{{title}}</div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div class="sub-menu float-left">
+		<ul class="sub-menu-list">
+			{{#each base.menu}}
+				<li class="sub-menu-item">
+					<ul>
+						{{#each this.subMunu}}
+							<li>
+								<a href="{{to}}">{{title}}</a>
+							</li>
+						{{/each}}
+					</ul>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</aside>
+
+<section class="wrap clearfix">
+	<ul class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a href="#">
+            Home
+        </a>
+		</li>
+		<li class="breadcrumb-item">
+			<a href="#">
+            Profile
+        </a>
+		</li>
+		<li class="breadcrumb-item">
+			<a href="#">
+            Change avatar
+        </a>
+		</li>
+	</ul>
+
 	{{{body}}}
 </section>
+
 {{>footer}}

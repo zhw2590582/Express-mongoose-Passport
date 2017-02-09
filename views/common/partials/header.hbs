@@ -16,17 +16,29 @@
 		<section class="container warning-info">
 			<div class="columns">
 				{{#if success_msg}}
-					<div class="column col-12 text-center success_msg">{{success_msg}}</div>
+					<div class="toast toast-success">
+	            <button class="btn btn-clear float-right"></button>
+	            <i class="icon icon-error_outline"></i> {{success_msg}}
+	        </div>
 				{{/if}}
 				{{#if error_msg}}
-					<div class="column col-12 text-center error_msg">{{error_msg}}</div>
+					<div class="toast toast-danger">
+							<button class="btn btn-clear float-right"></button>
+							<i class="icon icon-error_outline"></i> {{error_msg}}
+					</div>
 				{{/if}}
 				{{#if error}}
-					<div class="column col-12 text-center error">{{error}}</div>
+					<div class="toast toast-danger">
+							<button class="btn btn-clear float-right"></button>
+							<i class="icon icon-error_outline"></i> {{error}}
+					</div>
 				{{/if}}
 				{{#if errors}}
 		      {{#each errors}}
-		        <div class="column col-12 text-center error">{{msg}}</div>
+						<div class="toast toast-danger">
+								<button class="btn btn-clear float-right"></button>
+								<i class="icon icon-error_outline"></i> {{msg}}
+						</div>
 		      {{/each}}
 				{{/if}}
       </div>
