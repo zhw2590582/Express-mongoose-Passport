@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', ensureAuthenticated, function(req, res){
 	res.render('index/index',{
 		dir:'index',
-		subTitle: false
+		subTitle: '主页'
 	});
 });
 
