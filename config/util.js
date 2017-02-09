@@ -20,6 +20,7 @@ var adminAccount = function(req, res, next) {
   base.account.forEach(function(item) {
     if (item.name === username && item.password === password) {
       verify = true;
+      return;
     }
   })
 
