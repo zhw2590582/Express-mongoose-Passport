@@ -22,7 +22,7 @@ module.exports = {
   entry: entries,
   output: {
     path: path.join(__dirname, './public/'),
-    filename: isProduction ? 'js/[name]-[hash:8].js' : 'js/[name].js',
+    filename: isProduction ? 'js/[name].[hash:8].js' : 'js/[name].js',
     publicPath: '/'
   },
   module: {
@@ -65,10 +65,10 @@ module.exports = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: isProduction ? 'js/vendor-[hash:8].js' : 'js/vendor.js',
+      filename: isProduction ? 'js/vendor.[hash:8].js' : 'js/vendor.js',
       minChunks: 3
     }),
-    new ExtractTextPlugin(isProduction ? 'css/[name]-[hash:8].css' : 'css/[name].css'),
+    new ExtractTextPlugin(isProduction ? 'css/[name].[hash:8].css' : 'css/[name].css'),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')

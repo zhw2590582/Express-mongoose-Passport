@@ -2,11 +2,12 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var util = require('../config/util');
 
 var User = require('../models/user');
 
 // 注册页面
-router.get('/register', function(req, res) {
+router.get('/register', util.registerAble, function(req, res) {
   res.render('register/index', {
     dir: 'register',
     layout: 'login',
@@ -62,7 +63,6 @@ router.post('/register', function(req, res) {
     });
 
     req.flash('success_msg', '注册成功，马上登录吧');
-
     res.redirect('/users/login');
   }
 });
@@ -102,18 +102,21 @@ passport.deserializeUser(function(id, done) {
 
 // 用户登录
 router.post('/login',
+  util.adminAccount,
   passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/users/login',
     failureFlash: true
   }),
   function(req, res) {
+    req.flash('success_msg', '登录成功');
     res.redirect('/');
   });
 
 // 用户登出
 router.get('/logout', function(req, res) {
   req.logout();
+  req.session.admin = false;
   req.flash('success_msg', '登出成功');
   res.redirect('/users/login');
 });

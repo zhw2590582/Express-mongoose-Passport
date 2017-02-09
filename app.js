@@ -12,6 +12,8 @@ var cors = require('cors');
 var morgan = require('morgan');
 var compression = require('compression');
 var helmet = require('helmet');
+
+//基础配置
 var base = require('./config/base');
 
 //函数工具
@@ -25,7 +27,7 @@ var users = require('./routes/users');
 var app = express();
 
 // 打印日志
-app.use(morgan('common'));
+//app.use(morgan('common'));
 
 // 合并请求
 app.use(compression());
@@ -95,11 +97,10 @@ app.use(flash());
 app.use(function(req, res, next) {
   // 获取webpack的hash值
   var hash = util.getHash('./public/js/*.js');
-
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
-  res.locals.user = req.user || null;
+  res.locals.user = req.user || req.session.admin || null;
   res.locals.base = base;
   res.locals.hash = hash || '';
   next();

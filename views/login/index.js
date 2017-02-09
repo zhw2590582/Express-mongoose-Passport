@@ -1,16 +1,12 @@
-var dialog = require('../common/dialog');
-var parsley = require('../common/parsley');
+var dialog = require('../common/dialog/dialog');
+var parsley = require('../common/parsley/parsley');
+var base = require('../common/js/base');
 
 require('spectre.css');
 require('../common/style/base.scss');
 require('./index.scss');
 
 $(document).ready(function() {
-
-  //隐藏服务器消息
-  setTimeout(function() {
-    $('.warning-info').slideToggle();
-  }, 3000);
 
   //dialog('6666', null, 3000);
 

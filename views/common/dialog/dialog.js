@@ -1314,4 +1314,4 @@
 
 })();
 
-require('./index.css')
+require('./dialog.css')

@@ -1,5 +1,6 @@
-var dialog = require('../common/dialog');
-var parsley = require('../common/parsley');
+var dialog = require('../common/dialog/dialog');
+var parsley = require('../common/parsley/parsley');
+var base = require('../common/js/base');
 
 require('spectre.css');
 require('../common/style/base.scss');

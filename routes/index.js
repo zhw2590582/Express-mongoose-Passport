@@ -11,7 +11,7 @@ router.get('/', ensureAuthenticated, function(req, res){
 
 // 验证是否登陆
 function ensureAuthenticated(req, res, next){
-	if(req.isAuthenticated()){
+	if(req.isAuthenticated() || req.session.admin){
 		return next();
 	} else {
 		res.redirect('/users/login');
