@@ -19,8 +19,8 @@ module.exports = {
     prot: 25,
     auth: {
       user: '717995589@qq.com',
-      pass: 'Qq@717995589'
+      pass: 'password'
     },
-    to:'laozhaochaguan@sina.cn'
+    to:'717995589@qq.com'
   }
 }

@@ -1,2 +1,2 @@
-webpackJsonp([3],{0:function(n,c,t){(function(n){"use strict";t(47),t(50),t(46);t(28),t(40),t(44),n(document).ready(function(){})}).call(c,t(27))},44:function(n,c){}});
+webpackJsonp([3],{0:function(e,n,s){(function(e){"use strict";s(47),s(50),s(46);s(28),s(40),s(44),e(document).ready(function(){e("#register-form").parsley().on("field:validated",function(){var n=e(this.$element).hasClass("parsley-error");e(this.$element).parent().toggleClass("has-danger",n),e(this.$element).parent().toggleClass("has-success",!n)}).on("form:submit",function(){})})}).call(n,s(27))},44:function(e,n){}});
 //# sourceMappingURL=index.js.map

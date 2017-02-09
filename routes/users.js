@@ -33,12 +33,12 @@ router.post('/register', function(req, res) {
   var password2 = req.body.password2;
 
   // 验证
-  req.checkBody('name', 'Name is required').notEmpty();
-  req.checkBody('email', 'Email is required').notEmpty();
-  req.checkBody('email', 'Email is not valid').isEmail();
-  req.checkBody('username', 'Username is required').notEmpty();
-  req.checkBody('password', 'Password is required').notEmpty();
-  req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
+  req.checkBody('name', '昵称不能为空').notEmpty();
+  req.checkBody('email', '邮件不能为空').notEmpty();
+  req.checkBody('email', '邮件格式错误').isEmail();
+  req.checkBody('username', '用户名不能为空').notEmpty();
+  req.checkBody('password', '密码不能为空').notEmpty();
+  req.checkBody('password2', '两次密码不匹配').equals(req.body.password);
 
   var errors = req.validationErrors();
 

@@ -2384,4 +2384,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
   return parsley;
 });
+
+require('./i18n/zh_cn');
+
 //# sourceMappingURL=parsley.js.map

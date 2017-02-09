@@ -24,6 +24,11 @@
 				{{#if error}}
 					<div class="column col-12 text-center error">{{error}}</div>
 				{{/if}}
+				{{#if errors}}
+		      {{#each errors}}
+		        <div class="column col-12 text-center error">{{msg}}</div>
+		      {{/each}}
+				{{/if}}
       </div>
 		</section>
 		<section class="container">

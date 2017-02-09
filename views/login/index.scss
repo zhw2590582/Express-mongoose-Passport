@@ -1,4 +1,19 @@
-.form-horizontal{
-  max-width: 600px;
+.login-form{
+  max-width: 340px;
+  padding: 50px 20px;
   margin: 100px auto 0;
+  border-radius:5px;
+  .btn-primary{
+    width: 100%
+  }
+}
+
+.form-group{
+  position: relative;
+  .parsley-errors-list{
+    position: absolute;
+    left: 315px;
+    width: 300px;
+    top: -2px;
+  }
 }

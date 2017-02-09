@@ -7,3 +7,22 @@
   background: #5764c6;
   color: #fff
 }
+
+.parsley-errors-list{
+  margin: 0;
+  li{
+    list-style: none
+  }
+}
+
+.has-success{
+  .parsley-errors-list{
+    color: #32b643
+  }
+}
+
+.has-danger{
+  .parsley-errors-list{
+    color: #e85600
+  }
+}
