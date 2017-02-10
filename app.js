@@ -12,17 +12,13 @@ var cors = require('cors');
 var morgan = require('morgan');
 var compression = require('compression');
 var helmet = require('helmet');
+var glob = require('glob');
 
 //基础配置
 var base = require('./config/base');
 
 //函数工具
 var util = require('./util/base');
-
-// 路由页面
-var routes = require('./routes/index');
-var account = require('./routes/account');
-var posts = require('./routes/posts');
 
 // 初始化
 var app = express();
@@ -116,10 +112,17 @@ app.use(function(req, res, next) {
   next();
 });
 
-// 使用路由
-app.use('/', routes);
-app.use('/account', account);
-app.use('/posts', posts);
+//批量引入路由页面
+var requireRoutes = function(routesDir) {
+  var routesArr = glob.sync(routesDir);
+  routesArr.forEach(function(route) {
+    var name = route.split('./routes/')[1].split('.js')[0];
+    var dir = name === 'index' ? '/' : '/' + name;
+    app.use(dir,require(route));
+    //console.log(dir,route);
+  })
+};
+requireRoutes('./routes/*.js');
 
 // 捕捉错误
 app.use(function(req, res, next) {
