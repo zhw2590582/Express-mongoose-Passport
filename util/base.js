@@ -46,13 +46,13 @@ var registerAble = function(req, res, next) {
 //验证是否登陆
 var isLogin = function(req, res, next) {
   var arr = ['account', 'error']; //排除路由
-  var url = req.originalUrl.split('/')[1];
+  var route = req.originalUrl.split('/')[1];
   var loginPage = arr.some(function(item) {
-    return item === url
+    return item === route
   })
   if (!loginPage && req.isAuthenticated() || req.session.admin) {
     return next();
-  } else if (url !== 'account') {
+  } else if (route !== 'account') {
     res.redirect('/account/login');
   } else {
     return next();
