@@ -34,7 +34,7 @@ var adminAccount = function(req, res, next) {
 }
 
 //是否允许注册
-var registerAble = function (req, res, next) {
+var registerAble = function(req, res, next) {
   if (base.registerAble) {
     next()
   } else {
@@ -43,28 +43,25 @@ var registerAble = function (req, res, next) {
   }
 }
 
-// 主页验证是否登陆
-var indexAuthenticated = function (req, res, next){
-	if(req.isAuthenticated() || req.session.admin){
-		return next();
-	} else {
-		res.redirect('/account/login');
-	}
-}
-
-// 内页验证是否登陆
-var pageAuthenticated = function (req, res, next){
-  if(req.isAuthenticated() || req.session.admin){
-    res.redirect('/');
-	} else {
-		return next();
-	}
+//验证是否登陆
+var isLogin = function(req, res, next) {
+  var arr = ['account', 'error']; //排除路由
+  var url = req.originalUrl.split('/')[1];
+  var loginPage = arr.some(function(item) {
+    return item === url
+  })
+  if (!loginPage && req.isAuthenticated() || req.session.admin) {
+    return next();
+  } else if (url !== 'account') {
+    res.redirect('/account/login');
+  } else {
+    return next();
+  }
 }
 
 module.exports = {
   getHash,
   adminAccount,
   registerAble,
-  indexAuthenticated,
-  pageAuthenticated
+  isLogin
 }

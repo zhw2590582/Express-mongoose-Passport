@@ -112,6 +112,9 @@ app.use(function(req, res, next) {
   next();
 });
 
+// 所有页面验证登陆
+app.use('*', util.isLogin);
+
 //批量引入路由页面
 var requireRoutes = function(routesDir) {
   var routesArr = glob.sync(routesDir);
