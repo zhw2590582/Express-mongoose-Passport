@@ -24,43 +24,60 @@ module.exports = {
     to: '717995589@qq.com'
   },
   menu: [{ //菜单配置
-    title: '模块1',
-    icon: 'fa fa-bell-o',
+    title: '总览',
+    icon: 'fa fa-tachometer',
+    to: '/',
     subMunu: [{
-      title: '子菜单1',
-      to: '/1'
+      title: '访问统计',
+      to: '/'
     }, {
-      title: '子菜单2',
-      to: '/2'
-    }, {
-      title: '子菜单3',
-      to: '/3'
+      title: '用户统计',
+      to: '/visits-users'
     }]
   }, {
-    title: '模块2',
-    icon: 'fa fa-bell-o',
+    title: '模块',
+    icon: 'fa fa-cubes',
+    to: '/posts',
     subMunu: [{
-      title: '子菜单4',
-      to: '/1'
+      title: '文章',
+      to: '/posts'
     }, {
-      title: '子菜单5',
-      to: '/2'
-    }, {
-      title: '子菜单6',
-      to: '/3'
+      title: '页面',
+      to: '/pages'
     }]
   }, {
-    title: '模块3',
-    icon: 'fa fa-bell-o',
+    title: '用户',
+    icon: 'fa fa-users',
+    to: '/users',
     subMunu: [{
-      title: '子菜单7',
+      title: '全部用户',
+      to: '/users'
+    }, {
+      title: '添加用户',
+      to: '/user-new'
+    }, {
+      title: '个人资料',
+      to: '/profile'
+    }]
+  }, {
+    title: '资源',
+    icon: 'fa fa-puzzle-piece',
+    subMunu: [{
+      title: '资源1',
       to: '/1'
     }, {
-      title: '子菜单8',
+      title: '资源2',
       to: '/2'
+    }]
+  }, {
+    title: '配置',
+    icon: 'fa fa-sliders',
+    subMunu: [{
+      title: '配置1',
+      to: '/1'
     }, {
-      title: '子菜单9',
-      to: '/3'
+      title: '配置2',
+      to: '/2'
     }]
   }]
 }

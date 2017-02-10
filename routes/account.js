@@ -4,7 +4,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var util = require('../util/base');
 
-var User = require('../models/user');
+var User = require('../models/account');
 
 // 注册页面
 router.get('/register', util.registerAble, util.pageAuthenticated, function(req, res) {
@@ -63,7 +63,7 @@ router.post('/register', function(req, res) {
     });
 
     req.flash('success_msg', '注册成功，马上登录吧');
-    res.redirect('/users/login');
+    res.redirect('/account/login');
   }
 });
 
@@ -105,7 +105,7 @@ router.post('/login',
   util.adminAccount,
   passport.authenticate('local', {
     successRedirect: '/',
-    failureRedirect: '/users/login',
+    failureRedirect: '/account/login',
     failureFlash: true
   }),
   function(req, res) {
@@ -118,7 +118,7 @@ router.get('/logout', function(req, res) {
   req.logout();
   req.session.admin = false;
   req.flash('success_msg', '登出成功');
-  res.redirect('/users/login');
+  res.redirect('/account/login');
 });
 
 module.exports = router;

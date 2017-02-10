@@ -20,16 +20,16 @@
 			<div id="avatarBox" class="avatarBox float-left cursor">
 				<div class="avatarBtn">
 					<figure class="avatar avatar-sm">
-						<img src="/img/avatar.png" />
+						<img src="https://secure.gravatar.com/avatar/a40459cbaf7d814802fdf2fa4a8cdcbd?s=52" />
 					</figure>
 					<i class="fa fa-caret-down" aria-hidden="true"></i>
 				</div>
 				<ul class="avatarMenu menu">
 					<li class="menu-item">
-						<a href="#dropdowns"><i class="fa fa-cogs" aria-hidden="true"></i> 设置中心</a>
+						<a href="/profile"><i class="fa fa-cogs" aria-hidden="true"></i> 设置中心</a>
 					</li>
 					<li class="menu-item">
-						<a href="/users/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出</a>
+						<a href="/account/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出</a>
 					</li>
 				</ul>
 			</div>
@@ -42,10 +42,12 @@
 		<ul class="main-menu-list">
 			{{#each base.menu}}
 				<li>
-					<div class="main-menu-icon">
-						<i class="{{icon}}" aria-hidden="true"></i>
-					</div>
-					<div class="main-menu-text">{{title}}</div>
+					<a href="{{to}}">
+						<div class="main-menu-icon">
+							<i class="{{icon}}" aria-hidden="true"></i>
+						</div>
+						<div class="main-menu-text">{{title}}</div>
+					</a>
 				</li>
 			{{/each}}
 		</ul>

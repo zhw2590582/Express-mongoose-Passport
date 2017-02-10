@@ -39,7 +39,7 @@ var registerAble = function (req, res, next) {
     next()
   } else {
     req.flash('error_msg', '暂不允许注册用户');
-    res.redirect('/users/login');
+    res.redirect('/account/login');
   }
 }
 
@@ -48,7 +48,7 @@ var indexAuthenticated = function (req, res, next){
 	if(req.isAuthenticated() || req.session.admin){
 		return next();
 	} else {
-		res.redirect('/users/login');
+		res.redirect('/account/login');
 	}
 }
 

@@ -6,8 +6,15 @@ var util = require('../util/base');
 router.get('/', util.indexAuthenticated, function(req, res){
 	res.render('index/index',{
 		dir:'index',
-		subTitle: '主页'
+		subTitle: '访问统计'
 	});
+});
+
+router.get('/visits-users', function(req, res) {
+  res.render('visits-users/index', {
+    dir: 'visits-users',
+    subTitle: '用户统计'
+  });
 });
 
 module.exports = router;

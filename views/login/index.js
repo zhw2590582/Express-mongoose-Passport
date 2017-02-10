@@ -8,6 +8,7 @@ require('./index.scss');
 
 $(document).ready(function() {
   'use strict';
+  $('#login-username').focus();
   $('#login-form').parsley().on('field:validated', function() {
       var error = $(this.$element).hasClass('parsley-error');
       $(this.$element).parent().toggleClass('has-danger', error);

@@ -1,0 +1,182 @@
+@import './variables.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-h;
+  line-height: $header-h;
+  background: $color01;
+  color: #fff;
+
+  .cursor {
+    &:hover {
+      background: darken($color01,5%);
+      transition: all 0.1s;
+    }
+  }
+}
+
+.header-left {
+  width: $aside-w;
+  background: darken($color01,5%);
+  padding-left: 20px;
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .setup {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+
+.header-right {
+  width: 100%;
+  padding-left: $aside-w;
+
+  .search {
+    padding: 10px;
+    width: 250px;
+
+    input {
+      border: none;
+    }
+  }
+
+  .account {
+    padding-right: 20px;
+    font-size: 14px;
+
+    .float-left {
+      position: relative;
+      margin-left: 20px;
+      padding: 0 10px;
+      line-height: 50px;
+    }
+
+    .avatar {
+      margin-right: 5px;
+    }
+  }
+
+  .avatarMenu{
+    -webkit-animation: slide-down .216s;
+    animation: slide-down .216s;
+    display: none;
+    right: 0;
+    position: absolute;
+    top: 44px;
+  }
+
+  .redDot {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: red;
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+}
+
+.aside {
+  position: fixed;
+  height: 100%;
+  top: $header-h;
+  width: $aside-w;
+  background: $color02;
+
+  .main-menu {
+    width: 60px;
+    height: 100%;
+    background: darken($color02,5%);
+    border-right: 1px solid darken($color02,10%);
+  }
+
+  .sub-menu {
+    width: $aside-w - 60px;
+    height: 100%;
+  }
+}
+
+.main-menu-list {
+  margin: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    height: 70px;
+    list-style-type: none;
+    border-bottom: 1px solid $color02;
+    color: #b4b8c4;
+    text-align: center;
+
+    a {
+      font-size: 12px;
+      display: block;
+      padding-top: 15px;
+      height: 100%;
+      color: #b4b8c4;
+      text-decoration: none;
+
+      &.current,
+      &:hover {
+        color: #fff;
+        background: $color01;
+        transition: all 0.1s;
+      }
+    }
+    .main-menu-icon {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .main-menu-text {
+      font-size: 12px;
+    }
+  }
+}
+
+.sub-menu-list {
+  .sub-menu-item {
+    ul {
+      margin: 0;
+
+      li {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid darken($color02,10%);
+
+        a {
+          font-size: 12px;
+          display: block;
+          height: 100%;
+          color: #b4b8c4;
+          padding-left: 10px;
+          text-decoration: none;
+
+          &.current,
+          &:hover {
+            color: #fff;
+            background: $color01;
+            transition: all 0.1s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  padding-top: $header-h;
+  padding-left: $aside-w + 20px;
+  padding-right: 20px;
+}
