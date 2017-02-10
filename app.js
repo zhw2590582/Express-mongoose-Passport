@@ -22,6 +22,7 @@ var util = require('./util/base');
 // 路由页面
 var routes = require('./routes/index');
 var account = require('./routes/account');
+var posts = require('./routes/posts');
 
 // 初始化
 var app = express();
@@ -118,6 +119,7 @@ app.use(function(req, res, next) {
 // 使用路由
 app.use('/', routes);
 app.use('/account', account);
+app.use('/posts', posts);
 
 // 捕捉错误
 app.use(function(req, res, next) {
