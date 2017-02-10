@@ -62,22 +62,21 @@ module.exports = {
   }, {
     title: '资源',
     icon: 'fa fa-puzzle-piece',
+    to: '/picture',
     subMunu: [{
-      title: '资源1',
-      to: '/1'
+      title: '图片',
+      to: '/picture'
     }, {
-      title: '资源2',
-      to: '/2'
+      title: '其它',
+      to: '/media-other'
     }]
   }, {
     title: '配置',
     icon: 'fa fa-sliders',
+    to: '/options-general',
     subMunu: [{
-      title: '配置1',
-      to: '/1'
-    }, {
-      title: '配置2',
-      to: '/2'
+      title: '常规',
+      to: '/options-general'
     }]
   }]
 }

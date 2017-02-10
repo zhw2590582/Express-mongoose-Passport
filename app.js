@@ -98,12 +98,20 @@ app.use(flash());
 app.use(function(req, res, next) {
   // 获取webpack的hash值
   var hash = util.getHash('./public/js/*.js');
+
+  // 向浏览器暴露一个全局对象
+  var app_state = {
+    login: req.isAuthenticated() || req.session.admin || false,
+    page: req.originalUrl
+  }
+
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
   res.locals.user = req.user || req.session.admin || null;
   res.locals.base = base;
   res.locals.hash = hash || '';
+  res.locals.APP_STATE = JSON.stringify(app_state);
   next();
 });
 
